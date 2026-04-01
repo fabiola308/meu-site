@@ -3,70 +3,68 @@
 <head>
   <title>Meu Site</title>
 
-  <style>
-    body {
-      font-family: arial;
-    }
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+  }
 
-    .menu {
-      background-color: #3498db;
-      padding: 10px;
-    }
+  .menu {
+    background-color: #1f3c88;
+    padding: 15px;
+  }
 
-    .menu a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  .menu a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-    .dropdown {
-      display: inline-block;
-      position: relative;
-    }
+  .menu a:hover {
+    color: #ffd700;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 150px;
-    }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
 
-    .dropdown-content a {
-      display: block;
-      color: black;
-      padding: 10px;
-      text-decoration: none;
-    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  .dropdown-content a {
+    display: block;
+    color: #1f3c88;
+    padding: 10px;
+    text-decoration: none;
+  }
 
-    /* SUBMENU (Matific) */
-    .dropdown-sub {
-      position: relative;
-    }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
 
-    .dropdown-sub-content {
-      display: none;
-      position: absolute;
-      left: 150px;
-      top: 0;
-      background-color: white;
-      min-width: 180px;
-    }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    .dropdown-sub-content a {
-      display: block;
-      padding: 10px;
-      color: black;
-    }
+  h1 {
+    text-align: center;
+    color: #1f3c88;
+    margin-top: 30px;
+  }
 
-    .dropdown-sub:hover .dropdown-sub-content {
-      display: block;
-    }
-  </style>
+  .conteudo {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
 </head>
 
 <body>
@@ -109,6 +107,10 @@
 </div>
 
 <h1>Bem-vindo ao meu site!</h1>
+<div class="conteudo">
+  <p>Bem-vindo ao portal de recursos digitais.</p>
+  <p>Selecione uma opção no menu para acessar as plataformas.</p>
+</div>
 <p>Use o menu acima.</p>
 
 </body>
