@@ -50,6 +50,7 @@
 
     .dropdown-content a:hover {
       background-color: #f1f1f1;
+      color: #ffd700;
     }
 
     .dropdown:hover .dropdown-content {
@@ -60,6 +61,23 @@
       position: relative;
     }
 
+    .dropdown-sub > a {
+      color: #1f3c88; /* mesma cor do texto do dropdown */
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+
+    .dropdown-sub > a:hover {
+      color: #ffd700; /* hover uniforme */
+      background-color: #f1f1f1;
+    }
+
+    .dropdown-sub > a::after {
+      content: " ▶"; /* seta automática */
+      float: right;
+    }
+
     .dropdown-sub-content {
       display: none;
       position: absolute;
@@ -68,6 +86,7 @@
       background-color: white;
       min-width: 220px;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
 
     .dropdown-sub:hover .dropdown-sub-content {
@@ -121,7 +140,7 @@
 
       <!-- MATEMÁTICA 6º ANO -->
       <div class="dropdown-sub">
-        <a href="#">Matemática 6º Ano ▶</a>
+        <a href="#">Matemática 6º Ano</a>
         <div class="dropdown-sub-content">
           <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
         </div>
@@ -129,7 +148,7 @@
 
       <!-- MATEMÁTICA 7º ANO -->
       <div class="dropdown-sub">
-        <a href="#">Matemática 7º Ano ▶</a>
+        <a href="#">Matemática 7º Ano</a>
         <div class="dropdown-sub-content">
           <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
         </div>
@@ -137,7 +156,7 @@
 
       <!-- RECOMPOSIÇÃO 6º ANO -->
       <div class="dropdown-sub">
-        <a href="#">Recomposição 6º Ano ▶</a>
+        <a href="#">Recomposição 6º Ano</a>
         <div class="dropdown-sub-content">
           <a href="https://www.matific.com" target="_blank">Acesso</a>
           <a href="avaliacao6ano.html">Criação de turmas / Avaliação diagnóstica</a>
