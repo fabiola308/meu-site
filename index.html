@@ -7,7 +7,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f6f9;
+      background: linear-gradient(to right, #eef2f7, #f8f9fb);
     }
 
     .menu {
@@ -78,17 +78,28 @@
       margin-top: 30px;
     }
 
-    .conteudo {
-      text-align: center;
-      margin-top: 20px;
-      background-color: white;
-      padding: 20px;
-      width: 60%;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    }
+   .conteudo {
+  text-align: center;
+  margin-top: 30px;
+  background: white;
+  padding: 30px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.destaque {
+  font-size: 28px;
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+.subtexto {
+  font-size: 18px;
+  color: #555;
+}
   </style>
 </head>
 
@@ -138,8 +149,8 @@
 
 <!-- LOGO -->
 <div style="text-align:center; margin-top:20px;">
-  <img src="MatematicaPR_horiz_principal_MATIFIC.png" width="180">
-  <img src="MatematicaPR_horiz_principal_KHAN.png" width="180">
+ <img src="MatematicaPR_horiz_principal_MATIFIC.png" width="180" style="margin-right:20px;">
+<img src="MatematicaPR_horiz_principal_KHAN.png" width="180">
 </div>
 
 <!-- TÍTULO -->
@@ -147,8 +158,15 @@
 
 <!-- CONTEÚDO -->
 <div class="conteudo">
-  <p>Bem-vindo ao portal de recursos digitais.</p>
-  <p>Selecione uma opção no menu para acessar as plataformas.</p>
+  <h2 class="destaque">Bem-vindo ao Portal de Recursos Digitais</h2>
+
+  <p class="subtexto">
+    Ambiente digital de apoio à aprendizagem e recomposição de conteúdos em Matemática.
+  </p>
+
+  <p class="subtexto">
+    Selecione uma opção no menu para acessar as plataformas.
+  </p>
 </div>
 
 </body>
