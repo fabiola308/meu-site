@@ -20,11 +20,12 @@
       margin-right: 25px;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
     }
 
     .menu a:hover {
       color: #ffd700;
-      transition: 0.3s;
+      transition: color 0.3s;
     }
 
     .dropdown {
@@ -39,13 +40,23 @@
       min-width: 220px;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
       z-index: 1000;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .dropdown-content a {
       display: block;
       color: #1f3c88;
-      padding: 10px;
+      padding: 10px 15px;
       text-decoration: none;
+      transition: background 0.3s, color 0.3s;
     }
 
     .dropdown-content a:hover {
@@ -53,29 +64,31 @@
       color: #ffd700;
     }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
     .dropdown-sub {
       position: relative;
     }
 
     .dropdown-sub > a {
-      color: #1f3c88; /* mesma cor do texto do dropdown */
+      color: #1f3c88;
       text-decoration: none;
       display: block;
-      padding: 10px;
+      padding: 10px 15px;
+      transition: background 0.3s, color 0.3s;
     }
 
     .dropdown-sub > a:hover {
-      color: #ffd700; /* hover uniforme */
       background-color: #f1f1f1;
+      color: #ffd700;
     }
 
     .dropdown-sub > a::after {
-      content: " ▶"; /* seta automática */
+      content: " ▶";
       float: right;
+      transition: transform 0.3s;
+    }
+
+    .dropdown-sub:hover > a::after {
+      transform: rotate(90deg);
     }
 
     .dropdown-sub-content {
@@ -86,11 +99,16 @@
       background-color: white;
       min-width: 220px;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.3s, transform 0.3s;
       z-index: 1000;
     }
 
     .dropdown-sub:hover .dropdown-sub-content {
       display: block;
+      opacity: 1;
+      transform: translateX(0);
     }
 
     h1 {
@@ -134,32 +152,29 @@
   </a>
 
   <div class="dropdown">
-    <a href="#">RECURSOS DIGITAIS ▼</a>
-
+    <a href="#">Recursos Digitais ▼</a>
     <div class="dropdown-content">
 
-      <!-- MATEMÁTICA 6º ANO -->
+      <!-- MATIFIC -->
       <div class="dropdown-sub">
-        <a href="#">Matemática 6º Ano</a>
+        <a href="#">Matific</a>
         <div class="dropdown-sub-content">
-          <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
+          <a href="https://www.matific.com" target="_blank">Matemática 6º Ano - Acessar</a>
+          <a href="https://www.matific.com" target="_blank">Matemática 7º Ano - Acessar</a>
+          <a href="https://www.matific.com" target="_blank">Recomposição 6º Ano - Acesso</a>
+          <a href="avaliacao6ano.html">Recomposição 6º Ano - Criação de turmas / Avaliação</a>
         </div>
       </div>
 
-      <!-- MATEMÁTICA 7º ANO -->
+      <!-- KHAN ACADEMY -->
       <div class="dropdown-sub">
-        <a href="#">Matemática 7º Ano</a>
+        <a href="#">Khan Academy</a>
         <div class="dropdown-sub-content">
-          <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
-        </div>
-      </div>
-
-      <!-- RECOMPOSIÇÃO 6º ANO -->
-      <div class="dropdown-sub">
-        <a href="#">Recomposição 6º Ano</a>
-        <div class="dropdown-sub-content">
-          <a href="https://www.matific.com" target="_blank">Acesso</a>
-          <a href="avaliacao6ano.html">Criação de turmas / Avaliação diagnóstica</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano Recomposição</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 1º Ano Resolução de Problemas</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 3º Ano Recomposição</a>
+          <a href="https://www.khanacademy.org" target="_blank">Khanmigo para Professores</a>
         </div>
       </div>
 
