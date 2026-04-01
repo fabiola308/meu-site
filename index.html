@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meu Site</title>
+  <title>Portal de Recursos Digitais</title>
 
- <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f6f9;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+    }
 
-  .menu {
-    background-color: #1f3c88;
-    padding: 15px;
-  }
+    .menu {
+      background-color: #1f3c88;
+      padding: 15px;
+    }
 
-  .menu a {
-    color: white;
-    margin-right: 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    .menu a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  .menu a:hover {
-    color: #ffd700;
-  }
+    .menu a:hover {
+      color: #ffd700;
+    }
 
-  .dropdown {
-    display: inline-block;
-    position: relative;
-  }
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 180px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-  }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
 
-  .dropdown-content a {
-    display: block;
-    color: #1f3c88;
-    padding: 10px;
-    text-decoration: none;
-  }
+    .dropdown-content a {
+      display: block;
+      color: #1f3c88;
+      padding: 10px;
+      text-decoration: none;
+    }
 
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-  h1 {
-    text-align: center;
-    color: #1f3c88;
-    margin-top: 30px;
-  }
+    /* Submenu lateral */
+    .dropdown-sub {
+      position: relative;
+    }
 
-  .conteudo {
-    text-align: center;
-    margin-top: 20px;
-  }
-</style>
+    .dropdown-sub-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-sub:hover .dropdown-sub-content {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1f3c88;
+      margin-top: 30px;
+    }
+
+    .conteudo {
+      text-align: center;
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 
 <body>
@@ -78,7 +104,7 @@
 
     <div class="dropdown-content">
 
-      <!-- MATIFIC (não clica direto) -->
+      <!-- MATIFIC -->
       <div class="dropdown-sub">
         <a href="#">Matific ▶</a>
 
@@ -91,30 +117,34 @@
 
       <!-- KHAN -->
       <div class="dropdown-sub">
-  <a href="#">Khan Academy ▶</a>
+        <a href="#">Khan Academy ▶</a>
 
-  <div class="dropdown-sub-content">
-    <a href="https://www.khanacademy.org" target="_blank">Matemática 9º ano</a>
-    <a href="https://www.khanacademy.org" target="_blank">Matemática 9º ano Recomposição</a>
-    <a href="https://www.khanacademy.org" target="_blank">Matemática 1º ano Resolução de Problemas</a>
-    <a href="https://www.khanacademy.org" target="_blank">Matemática 3º ano Recomposição</a>
-    <a href="https://www.khanacademy.org" target="_blank">Khanmigo para Professores</a>
-  </div>
-</div>
+        <div class="dropdown-sub-content">
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 9º ano</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 9º ano Recomposição</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 1º ano Resolução de Problemas</a>
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 3º ano Recomposição</a>
+          <a href="https://www.khanacademy.org" target="_blank">Khanmigo para Professores</a>
+        </div>
+      </div>
 
     </div>
   </div>
 </div>
+
+<!-- LOGO -->
 <div style="text-align:center; margin-top:20px;">
   <img src="logo.png" width="150">
 </div>
 
+<!-- TÍTULO -->
 <h1>Portal de Recursos Digitais</h1>
+
+<!-- CONTEÚDO -->
 <div class="conteudo">
   <p>Bem-vindo ao portal de recursos digitais.</p>
   <p>Selecione uma opção no menu para acessar as plataformas.</p>
 </div>
-<p>Use o menu acima.</p>
 
 </body>
 </html>
