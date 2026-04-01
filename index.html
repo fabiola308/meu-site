@@ -115,7 +115,7 @@
     .pdf-icon::before {
       content: "📄 ";
       margin-right: 5px;
-      color: red; /* ícone vermelho */
+      color: red;
     }
 
     h1 {
@@ -124,16 +124,22 @@
       margin-top: 30px;
     }
 
+    /* NOVO ESTILO: fundo transparente com sombra e blur */
     .conteudo {
       text-align: center;
-      margin-top: 30px;
-      background: white;
-      padding: 30px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.9); /* leve transparência */
+      padding: 40px;
       width: 60%;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 15px;
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      box-shadow: 0px 12px 30px rgba(0,0,0,0.2); /* sombra mais elegante */
+      backdrop-filter: blur(5px); /* efeito moderno */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .conteudo:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 15px 35px rgba(0,0,0,0.25);
     }
 
     .destaque {
