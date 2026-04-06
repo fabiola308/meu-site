@@ -44,7 +44,6 @@
       z-index: 1000;
     }
 
-    /* POSIÇÃO CORRIGIDA */
     .dropdown-content {
       top: 100%;
       left: 0;
@@ -56,7 +55,6 @@
       margin-left: 2px;
     }
 
-    /* ATIVO COM CLIQUE */
     .show {
       display: block;
     }
@@ -112,20 +110,20 @@
     INSTRUÇÃO NORMATIVA
   </a>
 
-  <!-- MENU PRINCIPAL -->
+  <!-- MENU -->
   <div class="dropdown">
-    <a onclick="toggleMenu('menu1')">Recursos Digitais ▼</a>
+    <a onclick="toggleMenu('menu1', event)">Recursos Digitais ▼</a>
 
     <div id="menu1" class="dropdown-content">
 
       <!-- MATIFIC -->
       <div class="dropdown-sub">
-        <a onclick="toggleMenu('matific')">Matific</a>
+        <a onclick="toggleMenu('matific', event)">Matific</a>
 
         <div id="matific" class="dropdown-sub-content">
 
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('m6')">Matemática 6º Ano</a>
+            <a onclick="toggleMenu('m6', event)">Matemática 6º Ano</a>
             <div id="m6" class="dropdown-sub-content">
               <a href="https://www.matific.com" target="_blank">Acessar</a>
               <a class="pdf-icon" href="#">Avaliação</a>
@@ -133,7 +131,7 @@
           </div>
 
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('m7')">Matemática 7º Ano</a>
+            <a onclick="toggleMenu('m7', event)">Matemática 7º Ano</a>
             <div id="m7" class="dropdown-sub-content">
               <a href="https://www.matific.com" target="_blank">Acessar</a>
               <a class="pdf-icon" href="#">Avaliação</a>
@@ -149,14 +147,14 @@
 
       <!-- KHAN -->
       <div class="dropdown-sub">
-        <a onclick="toggleMenu('khan')">Khan Academy</a>
+        <a onclick="toggleMenu('khan', event)">Khan Academy</a>
 
         <div id="khan" class="dropdown-sub-content">
 
           <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
 
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('k9')">9º Ano Recomposição</a>
+            <a onclick="toggleMenu('k9', event)">9º Ano Recomposição</a>
             <div id="k9" class="dropdown-sub-content">
               <a class="pdf-icon" href="#">Avaliação de Entrada</a>
             </div>
@@ -164,24 +162,24 @@
 
           <!-- KHANMIGO -->
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('khanmigo')">Khanmigo para Professores</a>
+            <a onclick="toggleMenu('khanmigo', event)">Khanmigo para Professores</a>
 
             <div id="khanmigo" class="dropdown-sub-content">
 
               <div class="dropdown-sub">
-                <a onclick="toggleMenu('manual')">Manual</a>
+                <a onclick="toggleMenu('manual', event)">Manual do Khanmigo</a>
                 <div id="manual" class="dropdown-sub-content">
                   <a class="pdf-icon" href="https://drive.google.com/file/d/1Aqw7m-37hnHE-wb3Fqs1W7uKVIhbEjlo/view?usp=sharing" target="_blank">
-                    Acessar
+                    Acessar Manual
                   </a>
                 </div>
               </div>
 
               <div class="dropdown-sub">
-                <a onclick="toggleMenu('ferramentas')">Ferramentas</a>
+                <a onclick="toggleMenu('ferramentas', event)">Ferramentas para Professores</a>
                 <div id="ferramentas" class="dropdown-sub-content">
                   <a class="pdf-icon" href="https://drive.google.com/file/d/1_2Z_hSLfHHIa_kDBPT6crH3Z91GLAZhc/view?usp=sharing" target="_blank">
-                    Acessar
+                    Acessar Ferramentas
                   </a>
                 </div>
               </div>
@@ -206,12 +204,10 @@
   <p>Selecione uma opção no menu.</p>
 </div>
 
-<!-- SCRIPT -->
 <script>
-function toggleMenu(id) {
+function toggleMenu(id, event) {
   event.stopPropagation();
 
-  // fecha outros menus
   document.querySelectorAll('.dropdown-content, .dropdown-sub-content')
     .forEach(el => {
       if (el.id !== id) el.classList.remove('show');
@@ -220,7 +216,6 @@ function toggleMenu(id) {
   document.getElementById(id).classList.toggle('show');
 }
 
-// fecha tudo ao clicar fora
 document.addEventListener('click', function() {
   document.querySelectorAll('.dropdown-content, .dropdown-sub-content')
     .forEach(el => el.classList.remove('show'));
