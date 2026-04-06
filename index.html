@@ -10,6 +10,7 @@
       background: linear-gradient(to right, #eef2f7, #f8f9fb);
     }
 
+    /* MENU */
     .menu {
       background-color: #1f3c88;
       padding: 15px;
@@ -31,7 +32,6 @@
       display: inline-block;
     }
 
-    /* TODOS COMEÇAM FECHADOS */
     .dropdown-content,
     .dropdown-sub-content {
       display: none;
@@ -42,7 +42,6 @@
       z-index: 1000;
     }
 
-    /* POSIÇÃO */
     .dropdown-content {
       top: 100%;
       left: 0;
@@ -54,7 +53,6 @@
       margin-left: 5px;
     }
 
-    /* ABRE SOMENTE O NÍVEL ATUAL */
     .dropdown:hover > .dropdown-content {
       display: block;
     }
@@ -63,7 +61,6 @@
       display: block;
     }
 
-    /* LINKS */
     .dropdown-content a,
     .dropdown-sub-content a {
       display: block;
@@ -78,24 +75,29 @@
       color: #ffd700;
     }
 
-    /* SETINHA */
     .dropdown-sub > a::after {
       content: " ▶";
       float: right;
     }
 
-    /* Ícone PDF */
     .pdf-icon::before {
       content: "📄 ";
-      margin-right: 5px;
     }
 
+    /* LOGOS */
+    .logos {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* TÍTULO */
     h1 {
       text-align: center;
       color: #1f3c88;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
+    /* CONTEÚDO */
     .conteudo {
       text-align: center;
       margin: 30px auto;
@@ -104,6 +106,52 @@
       width: 60%;
       border-radius: 20px;
       box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .destaque {
+      font-size: 42px;
+      color: #1f3c88;
+      font-weight: bold;
+    }
+
+    .subtexto {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* CONTATO PROFISSIONAL */
+    .contato-profissional {
+      text-align: center;
+      margin: 60px auto;
+      padding: 40px;
+      width: 380px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 25px;
+      box-shadow: 0px 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .foto-perfil {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #1f3c88;
+      margin-bottom: 15px;
+    }
+
+    .cargo {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .info-contato a {
+      color: #1f3c88;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .info-contato a:hover {
+      color: #ffd700;
     }
 
   </style>
@@ -123,7 +171,6 @@
 
     <div class="dropdown-content">
 
-      <!-- MATIFIC -->
       <div class="dropdown-sub">
         <a href="#">Matific</a>
 
@@ -133,82 +180,35 @@
             <a href="#">Matemática 6º Ano</a>
             <div class="dropdown-sub-content">
               <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
-            </div>
-          </div>
-
-          <div class="dropdown-sub">
-            <a href="#">Matemática 7º Ano</a>
-            <div class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
+              <a class="pdf-icon" href="#">Avaliação</a>
             </div>
           </div>
 
           <a class="pdf-icon" href="https://drive.google.com/file/d/1GjPlEpsm2C3oHU-q19zZY1eY-drBd1-H/view?usp=sharing" target="_blank">
-            Recomposição 6º Ano - Criação de turmas
-          </a>
-
-          <a class="pdf-icon" href="avaliacao6ano.html">
-            Recomposição 6º Ano - Avaliação
+            Criação de turmas
           </a>
 
         </div>
       </div>
 
-      <!-- KHAN -->
       <div class="dropdown-sub">
         <a href="#">Khan Academy</a>
 
         <div class="dropdown-sub-content">
 
-          <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
-
           <div class="dropdown-sub">
-            <a href="#">Matemática 9º Ano Recomposição</a>
+            <a href="#">Khanmigo</a>
+
             <div class="dropdown-sub-content">
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
-                Avaliação de Entrada
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1Aqw7m-37hnHE-wb3Fqs1W7uKVIhbEjlo/view?usp=sharing" target="_blank">
+                Manual
+              </a>
+
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1_2Z_hSLfHHIa_kDBPT6crH3Z91GLAZhc/view?usp=sharing" target="_blank">
+                Ferramentas
               </a>
             </div>
-          </div>
 
-          <a href="https://www.khanacademy.org" target="_blank">Matemática 1º Ano</a>
-
-          <div class="dropdown-sub">
-            <a href="#">Matemática 3º Ano Recomposição</a>
-            <div class="dropdown-sub-content">
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
-                Avaliação de Entrada
-              </a>
-            </div>
-          </div>
-
-          <!-- KHANMIGO -->
-          <div class="dropdown-sub">
-            <a href="#">Khanmigo para Professores</a>
-
-            <div class="dropdown-sub-content">
-
-              <div class="dropdown-sub">
-                <a href="#">Manual do Khanmigo</a>
-                <div class="dropdown-sub-content">
-                  <a class="pdf-icon" href="https://drive.google.com/file/d/1Aqw7m-37hnHE-wb3Fqs1W7uKVIhbEjlo/view?usp=sharing" target="_blank">
-                    Acessar Manual
-                  </a>
-                </div>
-              </div>
-
-              <div class="dropdown-sub">
-                <a href="#">Ferramentas para Professores</a>
-                <div class="dropdown-sub-content">
-                  <a class="pdf-icon" href="https://drive.google.com/file/d/1_2Z_hSLfHHIa_kDBPT6crH3Z91GLAZhc/view?usp=sharing" target="_blank">
-                    Acessar Ferramentas
-                  </a>
-                </div>
-              </div>
-
-            </div>
           </div>
 
         </div>
@@ -217,24 +217,44 @@
     </div>
   </div>
 
-  <a href="contato.html">Contato</a>
+  <a href="#contato">Contato</a>
 </div>
 
-<div style="text-align:center; margin-top:20px;">
-  <img src="MatematicaPR_horiz_principal_MATIFIC.png" width="180" style="margin-right:20px;">
+<!-- LOGOS -->
+<div class="logos">
+  <img src="MatematicaPR_horiz_principal_MATIFIC.png" width="180">
   <img src="MatematicaPR_horiz_principal_KHAN.png" width="180">
 </div>
 
 <h1>Portal de Recursos Digitais</h1>
 
 <div class="conteudo">
-  <h2>Bem-vindo ao Portal de Recursos Digitais</h2>
-  <p>
+  <h2 class="destaque">Bem-vindo ao Portal</h2>
+
+  <p class="subtexto">
     Ambiente digital de apoio à aprendizagem e recomposição de conteúdos em Matemática.
   </p>
-  <p>
+
+  <p class="subtexto">
     Selecione uma opção no menu para acessar as plataformas.
   </p>
+</div>
+
+<!-- CONTATO -->
+<div class="contato-profissional" id="contato">
+
+  <h2>Contato</h2>
+
+  <img src="foto.jpg" class="foto-perfil">
+
+  <h3>Fabíola</h3>
+  <p class="cargo">Coordenação de Educação Digital</p>
+
+  <div class="info-contato">
+    <p>📧 <a href="mailto:seuemail@escola.com">seuemail@escola.com</a></p>
+    <p>📱 <a href="tel:+5541999999999">(41) 99999-9999</a></p>
+  </div>
+
 </div>
 
 </body>
