@@ -20,97 +20,71 @@
       margin-right: 25px;
       text-decoration: none;
       font-weight: bold;
-      position: relative;
     }
 
     .menu a:hover {
       color: #ffd700;
-      transition: color 0.3s;
     }
 
-    .dropdown {
+    .dropdown, .dropdown-sub {
+      position: relative;
       display: inline-block;
-      position: relative;
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 220px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.3s, transform 0.3s;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .dropdown-content a {
-      display: block;
-      color: #1f3c88;
-      padding: 10px 15px;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-      color: #ffd700;
-    }
-
-    .dropdown-sub {
-      position: relative;
-    }
-
-    .dropdown-sub > a {
-      color: #1f3c88;
-      text-decoration: none;
-      display: block;
-      padding: 10px 15px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .dropdown-sub > a:hover {
-      background-color: #f1f1f1;
-      color: #ffd700;
-    }
-
-    .dropdown-sub > a::after {
-      content: " ▶";
-      float: right;
-      transition: transform 0.3s;
-    }
-
-    .dropdown-sub:hover > a::after {
-      transform: rotate(90deg);
-    }
-
+    /* TODOS COMEÇAM FECHADOS */
+    .dropdown-content,
     .dropdown-sub-content {
       display: none;
       position: absolute;
-      left: 100%;
-      top: 0;
       background-color: white;
       min-width: 220px;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-      opacity: 0;
-      transform: translateX(-10px);
-      transition: opacity 0.3s, transform 0.3s;
       z-index: 1000;
     }
 
-    .dropdown-sub:hover .dropdown-sub-content {
-      display: block;
-      opacity: 1;
-      transform: translateX(0);
+    /* POSIÇÃO */
+    .dropdown-content {
+      top: 100%;
+      left: 0;
     }
 
+    .dropdown-sub-content {
+      top: 0;
+      left: 100%;
+      margin-left: 5px;
+    }
+
+    /* ABRE SOMENTE O NÍVEL ATUAL */
+    .dropdown:hover > .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-sub:hover > .dropdown-sub-content {
+      display: block;
+    }
+
+    /* LINKS */
+    .dropdown-content a,
+    .dropdown-sub-content a {
+      display: block;
+      color: #1f3c88;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover,
+    .dropdown-sub-content a:hover {
+      background-color: #f1f1f1;
+      color: #ffd700;
+    }
+
+    /* SETINHA */
+    .dropdown-sub > a::after {
+      content: " ▶";
+      float: right;
+    }
+
+    /* Ícone PDF */
     .pdf-icon::before {
       content: "📄 ";
       margin-right: 5px;
@@ -130,25 +104,8 @@
       width: 60%;
       border-radius: 20px;
       box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
-      backdrop-filter: blur(5px);
-      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .conteudo:hover {
-      transform: translateY(-3px);
-      box-shadow: 0px 15px 35px rgba(0,0,0,0.25);
-    }
-
-    .destaque {
-      font-size: 32px;
-      color: #1f3c88;
-      margin-bottom: 10px;
-    }
-
-    .subtexto {
-      font-size: 18px;
-      color: #555;
-    }
   </style>
 </head>
 
@@ -163,11 +120,13 @@
 
   <div class="dropdown">
     <a href="#">Recursos Digitais ▼</a>
+
     <div class="dropdown-content">
 
       <!-- MATIFIC -->
       <div class="dropdown-sub">
         <a href="#">Matific</a>
+
         <div class="dropdown-sub-content">
 
           <div class="dropdown-sub">
@@ -190,7 +149,9 @@
             Recomposição 6º Ano - Criação de turmas
           </a>
 
-          <a class="pdf-icon" href="avaliacao6ano.html">Recomposição 6º Ano - Avaliação</a>
+          <a class="pdf-icon" href="avaliacao6ano.html">
+            Recomposição 6º Ano - Avaliação
+          </a>
 
         </div>
       </div>
@@ -198,6 +159,7 @@
       <!-- KHAN -->
       <div class="dropdown-sub">
         <a href="#">Khan Academy</a>
+
         <div class="dropdown-sub-content">
 
           <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
@@ -205,7 +167,9 @@
           <div class="dropdown-sub">
             <a href="#">Matemática 9º Ano Recomposição</a>
             <div class="dropdown-sub-content">
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">Avaliação de Entrada</a>
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
+                Avaliação de Entrada
+              </a>
             </div>
           </div>
 
@@ -214,13 +178,16 @@
           <div class="dropdown-sub">
             <a href="#">Matemática 3º Ano Recomposição</a>
             <div class="dropdown-sub-content">
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">Avaliação de Entrada</a>
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
+                Avaliação de Entrada
+              </a>
             </div>
           </div>
 
           <!-- KHANMIGO -->
           <div class="dropdown-sub">
             <a href="#">Khanmigo para Professores</a>
+
             <div class="dropdown-sub-content">
 
               <div class="dropdown-sub">
@@ -261,15 +228,14 @@
 <h1>Portal de Recursos Digitais</h1>
 
 <div class="conteudo">
-  <h2 class="destaque">Bem-vindo ao Portal de Recursos Digitais</h2>
-  <p class="subtexto">
+  <h2>Bem-vindo ao Portal de Recursos Digitais</h2>
+  <p>
     Ambiente digital de apoio à aprendizagem e recomposição de conteúdos em Matemática.
   </p>
-  <p class="subtexto">
+  <p>
     Selecione uma opção no menu para acessar as plataformas.
   </p>
 </div>
 
 </body>
-</html>            
-
+</html>
