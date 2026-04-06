@@ -13,8 +13,6 @@
     .menu {
       background-color: #1f3c88;
       padding: 15px;
-      position: relative;
-      z-index: 999;
     }
 
     .menu a {
@@ -22,53 +20,63 @@
       margin-right: 25px;
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+      position: relative;
     }
 
     .menu a:hover {
       color: #ffd700;
+      transition: color 0.3s;
     }
 
-    .dropdown, .dropdown-sub {
-      position: relative;
+    .dropdown {
       display: inline-block;
+      position: relative;
     }
 
-    .dropdown-content,
-    .dropdown-sub-content {
+    .dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
       min-width: 220px;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
       z-index: 1000;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s, transform 0.3s;
     }
 
-    .dropdown-content {
-      top: 100%;
-      left: 0;
-    }
-
-    .dropdown-sub-content {
-      top: 0;
-      left: 100%;
-      margin-left: 2px;
-    }
-
-    .show {
+    .dropdown:hover .dropdown-content {
       display: block;
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .dropdown-content a,
-    .dropdown-sub-content a {
+    .dropdown-content a {
       display: block;
       color: #1f3c88;
-      padding: 10px;
+      padding: 10px 15px;
       text-decoration: none;
+      transition: background 0.3s, color 0.3s;
     }
 
-    .dropdown-content a:hover,
-    .dropdown-sub-content a:hover {
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      color: #ffd700;
+    }
+
+    .dropdown-sub {
+      position: relative;
+    }
+
+    .dropdown-sub > a {
+      color: #1f3c88;
+      text-decoration: none;
+      display: block;
+      padding: 10px 15px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dropdown-sub > a:hover {
       background-color: #f1f1f1;
       color: #ffd700;
     }
@@ -76,10 +84,36 @@
     .dropdown-sub > a::after {
       content: " ▶";
       float: right;
+      transition: transform 0.3s;
+    }
+
+    .dropdown-sub:hover > a::after {
+      transform: rotate(90deg);
+    }
+
+    .dropdown-sub-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: white;
+      min-width: 220px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 1000;
+    }
+
+    .dropdown-sub:hover .dropdown-sub-content {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .pdf-icon::before {
       content: "📄 ";
+      margin-right: 5px;
     }
 
     h1 {
@@ -91,11 +125,29 @@
     .conteudo {
       text-align: center;
       margin: 30px auto;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       padding: 40px;
       width: 60%;
       border-radius: 20px;
       box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .conteudo:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 15px 35px rgba(0,0,0,0.25);
+    }
+
+    .destaque {
+      font-size: 32px;
+      color: #1f3c88;
+      margin-bottom: 10px;
+    }
+
+    .subtexto {
+      font-size: 18px;
+      color: #555;
     }
   </style>
 </head>
@@ -103,38 +155,34 @@
 <body>
 
 <div class="menu">
-
   <a href="https://sites.google.com/escola.pr.gov.br/coordenaodeeducaodigital/in%C3%ADcio" target="_blank">Início</a>
 
   <a href="https://www.documentador.pr.gov.br/documentador/pub.do?action=d&uuid=@gtf-escriba-seed@5c46b6b8-a334-4510-8493-e798b5c9452a&emPg=true" target="_blank">
     INSTRUÇÃO NORMATIVA
   </a>
 
-  <!-- MENU -->
   <div class="dropdown">
-    <a onclick="toggleMenu('menu1', event)">Recursos Digitais ▼</a>
-
-    <div id="menu1" class="dropdown-content">
+    <a href="#">Recursos Digitais ▼</a>
+    <div class="dropdown-content">
 
       <!-- MATIFIC -->
       <div class="dropdown-sub">
-        <a onclick="toggleMenu('matific', event)">Matific</a>
-
-        <div id="matific" class="dropdown-sub-content">
+        <a href="#">Matific</a>
+        <div class="dropdown-sub-content">
 
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('m6', event)">Matemática 6º Ano</a>
-            <div id="m6" class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Acessar</a>
-              <a class="pdf-icon" href="#">Avaliação</a>
+            <a href="#">Matemática 6º Ano</a>
+            <div class="dropdown-sub-content">
+              <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
             </div>
           </div>
 
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('m7', event)">Matemática 7º Ano</a>
-            <div id="m7" class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Acessar</a>
-              <a class="pdf-icon" href="#">Avaliação</a>
+            <a href="#">Matemática 7º Ano</a>
+            <div class="dropdown-sub-content">
+              <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
             </div>
           </div>
 
@@ -142,33 +190,42 @@
             Recomposição 6º Ano - Criação de turmas
           </a>
 
+          <a class="pdf-icon" href="avaliacao6ano.html">Recomposição 6º Ano - Avaliação</a>
+
         </div>
       </div>
 
       <!-- KHAN -->
       <div class="dropdown-sub">
-        <a onclick="toggleMenu('khan', event)">Khan Academy</a>
-
-        <div id="khan" class="dropdown-sub-content">
+        <a href="#">Khan Academy</a>
+        <div class="dropdown-sub-content">
 
           <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
 
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('k9', event)">9º Ano Recomposição</a>
-            <div id="k9" class="dropdown-sub-content">
-              <a class="pdf-icon" href="#">Avaliação de Entrada</a>
+            <a href="#">Matemática 9º Ano Recomposição</a>
+            <div class="dropdown-sub-content">
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">Avaliação de Entrada</a>
+            </div>
+          </div>
+
+          <a href="https://www.khanacademy.org" target="_blank">Matemática 1º Ano</a>
+
+          <div class="dropdown-sub">
+            <a href="#">Matemática 3º Ano Recomposição</a>
+            <div class="dropdown-sub-content">
+              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">Avaliação de Entrada</a>
             </div>
           </div>
 
           <!-- KHANMIGO -->
           <div class="dropdown-sub">
-            <a onclick="toggleMenu('khanmigo', event)">Khanmigo para Professores</a>
-
-            <div id="khanmigo" class="dropdown-sub-content">
+            <a href="#">Khanmigo para Professores</a>
+            <div class="dropdown-sub-content">
 
               <div class="dropdown-sub">
-                <a onclick="toggleMenu('manual', event)">Manual do Khanmigo</a>
-                <div id="manual" class="dropdown-sub-content">
+                <a href="#">Manual do Khanmigo</a>
+                <div class="dropdown-sub-content">
                   <a class="pdf-icon" href="https://drive.google.com/file/d/1Aqw7m-37hnHE-wb3Fqs1W7uKVIhbEjlo/view?usp=sharing" target="_blank">
                     Acessar Manual
                   </a>
@@ -176,8 +233,8 @@
               </div>
 
               <div class="dropdown-sub">
-                <a onclick="toggleMenu('ferramentas', event)">Ferramentas para Professores</a>
-                <div id="ferramentas" class="dropdown-sub-content">
+                <a href="#">Ferramentas para Professores</a>
+                <div class="dropdown-sub-content">
                   <a class="pdf-icon" href="https://drive.google.com/file/d/1_2Z_hSLfHHIa_kDBPT6crH3Z91GLAZhc/view?usp=sharing" target="_blank">
                     Acessar Ferramentas
                   </a>
@@ -194,33 +251,24 @@
   </div>
 
   <a href="contato.html">Contato</a>
+</div>
 
+<div style="text-align:center; margin-top:20px;">
+  <img src="MatematicaPR_horiz_principal_MATIFIC.png" width="180" style="margin-right:20px;">
+  <img src="MatematicaPR_horiz_principal_KHAN.png" width="180">
 </div>
 
 <h1>Portal de Recursos Digitais</h1>
 
 <div class="conteudo">
-  <h2>Bem-vindo ao Portal</h2>
-  <p>Selecione uma opção no menu.</p>
+  <h2 class="destaque">Bem-vindo ao Portal de Recursos Digitais</h2>
+  <p class="subtexto">
+    Ambiente digital de apoio à aprendizagem e recomposição de conteúdos em Matemática.
+  </p>
+  <p class="subtexto">
+    Selecione uma opção no menu para acessar as plataformas.
+  </p>
 </div>
 
-<script>
-function toggleMenu(id, event) {
-  event.stopPropagation();
-
-  document.querySelectorAll('.dropdown-content, .dropdown-sub-content')
-    .forEach(el => {
-      if (el.id !== id) el.classList.remove('show');
-    });
-
-  document.getElementById(id).classList.toggle('show');
-}
-
-document.addEventListener('click', function() {
-  document.querySelectorAll('.dropdown-content, .dropdown-sub-content')
-    .forEach(el => el.classList.remove('show'));
-});
-</script>
-
 </body>
-</html>
+</html>            
