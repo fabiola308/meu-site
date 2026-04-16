@@ -37,8 +37,9 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 220px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      min-width: 230px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+      border-radius: 8px;
       z-index: 1000;
     }
 
@@ -53,7 +54,7 @@
       margin-left: 5px;
     }
 
-    /* ABRIR CORRETAMENTE */
+    /* ABERTURA CORRETA */
     .dropdown:hover > .dropdown-content {
       display: block;
     }
@@ -62,15 +63,7 @@
       display: block;
     }
 
-    /* IMPORTANTE: evita abrir tudo junto */
-    .dropdown-content .dropdown-sub-content {
-      display: none;
-    }
-
-    .dropdown-sub:hover > .dropdown-sub-content {
-      display: block;
-    }
-
+    /* LINKS */
     .dropdown-content a,
     .dropdown-sub-content a {
       display: block;
@@ -111,15 +104,15 @@
     .conteudo {
       text-align: center;
       margin: 30px auto;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px;
       width: 60%;
       border-radius: 20px;
-      box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+      box-shadow: 0px 15px 40px rgba(0,0,0,0.25);
     }
 
     .destaque {
-      font-size: 42px;
+      font-size: 44px;
       color: #1f3c88;
       font-weight: bold;
     }
@@ -155,7 +148,7 @@
           <div class="dropdown-sub">
             <a href="#">Matemática 6º Ano</a>
             <div class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
+              <a href="https://www.matific.com" target="_blank">Plataforma Matific</a>
               <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
             </div>
           </div>
@@ -163,17 +156,17 @@
           <div class="dropdown-sub">
             <a href="#">Matemática 7º Ano</a>
             <div class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Acessar Matific</a>
+              <a href="https://www.matific.com" target="_blank">Plataforma Matific</a>
               <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
             </div>
           </div>
 
           <a class="pdf-icon" href="https://drive.google.com/file/d/1GjPlEpsm2C3oHU-q19zZY1eY-drBd1-H/view?usp=sharing" target="_blank">
-            Recomposição 6º Ano - Criação de turmas
+            Criação de Turmas
           </a>
 
           <a class="pdf-icon" href="avaliacao6ano.html">
-            Recomposição 6º Ano - Avaliação
+            Avaliação Recomposição
           </a>
 
         </div>
@@ -188,7 +181,7 @@
           <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
 
           <div class="dropdown-sub">
-            <a href="#">Matemática 9º Ano Recomposição</a>
+            <a href="#">9º Ano Recomposição</a>
             <div class="dropdown-sub-content">
               <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
                 Avaliação de Entrada
@@ -196,8 +189,20 @@
             </div>
           </div>
 
-          <a href="https://sites.google.com/escola.pr.gov.br/coordenaodeeducaodigital/recursos-digitais/khan-academy?authuser=0" target="_blank">
-  Matemática 1º Ano
+          <!-- 1º ANO (CORRIGIDO PROFISSIONAL) -->
+          <div class="dropdown-sub">
+            <a href="#">Matemática 1º Ano</a>
+
+            <div class="dropdown-sub-content">
+              <a href="https://sites.google.com/escola.pr.gov.br/coordenaodeeducaodigital/recursos-digitais/khan-academy?authuser=0" target="_blank">
+                Material SEED
+              </a>
+
+              <a href="https://www.khanacademy.org" target="_blank">
+                Plataforma Khan
+              </a>
+            </div>
+          </div>
 
           <div class="dropdown-sub">
             <a href="#">Matemática 3º Ano Recomposição</a>
@@ -241,9 +246,7 @@
     </div>
   </div>
 
-  <!-- CONTATO CORRETO -->
   <a href="contato.html">Contato</a>
-
 </div>
 
 <!-- LOGOS -->
