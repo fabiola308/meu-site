@@ -1,26 +1,33 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
   <title>Portal de Recursos Digitais</title>
+
+  <!-- Fonte mais profissional -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #eef2f7, #f8f9fb);
+      background: #f4f6f9;
     }
 
-    /* MENU */
+    /* ===== MENU ===== */
     .menu {
-      background-color: #1f3c88;
-      padding: 15px;
+      background: #0b3d91;
+      padding: 18px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     .menu a {
       color: white;
-      margin-right: 25px;
+      margin-right: 30px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 15px;
     }
 
     .menu a:hover {
@@ -36,10 +43,11 @@
     .dropdown-sub-content {
       display: none;
       position: absolute;
-      background-color: white;
-      min-width: 230px;
-      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
-      border-radius: 8px;
+      background: white;
+      min-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      overflow: hidden;
       z-index: 1000;
     }
 
@@ -51,10 +59,8 @@
     .dropdown-sub-content {
       top: 0;
       left: 100%;
-      margin-left: 5px;
     }
 
-    /* ABERTURA CORRETA */
     .dropdown:hover > .dropdown-content {
       display: block;
     }
@@ -63,23 +69,22 @@
       display: block;
     }
 
-    /* LINKS */
     .dropdown-content a,
     .dropdown-sub-content a {
       display: block;
-      color: #1f3c88;
-      padding: 10px 15px;
+      padding: 12px 18px;
+      color: #0b3d91;
       text-decoration: none;
+      font-size: 14px;
     }
 
     .dropdown-content a:hover,
     .dropdown-sub-content a:hover {
-      background-color: #f1f1f1;
-      color: #ffd700;
+      background: #f1f5fb;
     }
 
     .dropdown-sub > a::after {
-      content: " ▶";
+      content: "›";
       float: right;
     }
 
@@ -87,39 +92,55 @@
       content: "📄 ";
     }
 
-    /* LOGOS */
-    .logos {
+    /* ===== HEADER ===== */
+    .header {
       text-align: center;
-      margin-top: 20px;
+      padding: 40px 20px 20px;
+      background: white;
+      border-bottom: 1px solid #ddd;
     }
 
-    /* TÍTULO */
-    h1 {
-      text-align: center;
-      color: #1f3c88;
-      margin-top: 20px;
+    .header img {
+      margin: 10px;
     }
 
-    /* CONTEÚDO */
+    .titulo {
+      font-size: 36px;
+      color: #0b3d91;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    /* ===== CONTEÚDO ===== */
     .conteudo {
-      text-align: center;
-      margin: 30px auto;
-      background: rgba(255, 255, 255, 0.95);
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
       padding: 50px;
-      width: 60%;
-      border-radius: 20px;
-      box-shadow: 0px 15px 40px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     .destaque {
-      font-size: 44px;
-      color: #1f3c88;
-      font-weight: bold;
+      font-size: 38px;
+      color: #0b3d91;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
 
     .subtexto {
       font-size: 18px;
       color: #555;
+      line-height: 1.6;
+    }
+
+    /* ===== RODAPÉ ===== */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
     }
 
   </style>
@@ -127,12 +148,10 @@
 
 <body>
 
+<!-- MENU -->
 <div class="menu">
-  <a href="https://sites.google.com/escola.pr.gov.br/coordenaodeeducaodigital/in%C3%ADcio" target="_blank">Início</a>
-
-  <a href="https://www.documentador.pr.gov.br/documentador/pub.do?action=d&uuid=@gtf-escriba-seed@5c46b6b8-a334-4510-8493-e798b5c9452a&emPg=true" target="_blank">
-    INSTRUÇÃO NORMATIVA
-  </a>
+  <a href="#" target="_blank">Início</a>
+  <a href="#" target="_blank">Instrução Normativa</a>
 
   <div class="dropdown">
     <a href="#">Recursos Digitais ▼</a>
@@ -148,26 +167,18 @@
           <div class="dropdown-sub">
             <a href="#">Matemática 6º Ano</a>
             <div class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Plataforma Matific</a>
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
+              <a href="https://www.matific.com" target="_blank">Plataforma</a>
+              <a class="pdf-icon" href="#">Avaliação</a>
             </div>
           </div>
 
           <div class="dropdown-sub">
             <a href="#">Matemática 7º Ano</a>
             <div class="dropdown-sub-content">
-              <a href="https://www.matific.com" target="_blank">Plataforma Matific</a>
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1hj8ze7_H3RF8dVB4l8EgZgIUHAfJ26ht/view?usp=sharing" target="_blank">Avaliação</a>
+              <a href="https://www.matific.com" target="_blank">Plataforma</a>
+              <a class="pdf-icon" href="#">Avaliação</a>
             </div>
           </div>
-
-          <a class="pdf-icon" href="https://drive.google.com/file/d/1GjPlEpsm2C3oHU-q19zZY1eY-drBd1-H/view?usp=sharing" target="_blank">
-            Criação de Turmas
-          </a>
-
-          <a class="pdf-icon" href="avaliacao6ano.html">
-            Avaliação Recomposição
-          </a>
 
         </div>
       </div>
@@ -178,65 +189,19 @@
 
         <div class="dropdown-sub-content">
 
-          <a href="https://www.khanacademy.org" target="_blank">Matemática 9º Ano</a>
-
-          <div class="dropdown-sub">
-            <a href="#">9º Ano Recomposição</a>
-            <div class="dropdown-sub-content">
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
-                Avaliação de Entrada
-              </a>
-            </div>
-          </div>
-
-          <!-- 1º ANO (CORRIGIDO PROFISSIONAL) -->
           <div class="dropdown-sub">
             <a href="#">Matemática 1º Ano</a>
-
             <div class="dropdown-sub-content">
-              <a href="https://sites.google.com/escola.pr.gov.br/coordenaodeeducaodigital/recursos-digitais/khan-academy?authuser=0" target="_blank">
-                Material SEED
-              </a>
-
-              <a href="https://www.khanacademy.org" target="_blank">
-                Plataforma Khan
-              </a>
+              <a href="#">Material SEED</a>
+              <a href="https://www.khanacademy.org" target="_blank">Plataforma</a>
             </div>
           </div>
 
           <div class="dropdown-sub">
-            <a href="#">Matemática 3º Ano Recomposição</a>
+            <a href="#">Khanmigo</a>
             <div class="dropdown-sub-content">
-              <a class="pdf-icon" href="https://drive.google.com/file/d/1U782OcfJDSq7eKL9vMZ75EXQY1T_pnwR/view?usp=sharing" target="_blank">
-                Avaliação de Entrada
-              </a>
-            </div>
-          </div>
-
-          <!-- KHANMIGO -->
-          <div class="dropdown-sub">
-            <a href="#">Khanmigo para Professores</a>
-
-            <div class="dropdown-sub-content">
-
-              <div class="dropdown-sub">
-                <a href="#">Manual do Khanmigo</a>
-                <div class="dropdown-sub-content">
-                  <a class="pdf-icon" href="https://drive.google.com/file/d/1Aqw7m-37hnHE-wb3Fqs1W7uKVIhbEjlo/view?usp=sharing" target="_blank">
-                    Acessar Manual
-                  </a>
-                </div>
-              </div>
-
-              <div class="dropdown-sub">
-                <a href="#">Ferramentas para Professores</a>
-                <div class="dropdown-sub-content">
-                  <a class="pdf-icon" href="https://drive.google.com/file/d/1_2Z_hSLfHHIa_kDBPT6crH3Z91GLAZhc/view?usp=sharing" target="_blank">
-                    Acessar Ferramentas
-                  </a>
-                </div>
-              </div>
-
+              <a class="pdf-icon" href="#">Manual</a>
+              <a class="pdf-icon" href="#">Ferramentas</a>
             </div>
           </div>
 
@@ -249,24 +214,29 @@
   <a href="contato.html">Contato</a>
 </div>
 
-<!-- LOGOS -->
-<div class="logos">
+<!-- HEADER -->
+<div class="header">
   <img src="MatematicaPR_horiz_principal_MATIFIC.png" width="180">
   <img src="MatematicaPR_horiz_principal_KHAN.png" width="180">
+  <div class="titulo">Portal de Recursos Digitais</div>
 </div>
 
-<h1>Portal de Recursos Digitais</h1>
-
+<!-- CONTEÚDO -->
 <div class="conteudo">
-  <h2 class="destaque">Bem-vindo ao Portal</h2>
+  <div class="destaque">Bem-vindo ao Portal</div>
 
   <p class="subtexto">
     Ambiente digital de apoio à aprendizagem e recomposição de conteúdos em Matemática.
   </p>
 
   <p class="subtexto">
-    Selecione uma opção no menu para acessar as plataformas.
+    Utilize o menu acima para acessar os recursos disponíveis.
   </p>
+</div>
+
+<!-- RODAPÉ -->
+<div class="footer">
+  Secretaria de Estado da Educação • Paraná
 </div>
 
 </body>
